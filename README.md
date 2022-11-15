@@ -35,8 +35,48 @@ docker run -d --name=kaltura -p 80:80 -p 443:443 -p 1935:1935 -p 88:88 -p 8443:8
 # docker exec -i -t kaltura /root/install/install.sh MYSQL_ROOT_PASSWD_HERE
 ``` 
 
-Your install will now automatically perform all install tasks.
-[See more details about the configuration process](install-kaltura-redhat-based.md#start-of-kaltura-configuration).
+Your install will now automatically perform all install tasks. You just need to paas some details of the questions asked during installation process.
+
+The below is a sample question answer format, replace the input marked by <> with your own details:
+
+```sh
+[Email\NO]: "<your email address>"
+CDN hostname [kalrpm.lcl]: "<your hostname>"
+Apache virtual hostname [kalrpm.lcl]: "<your hostname>"
+Which port will this Vhost listen on [80]?: "<443>"
+DB hostname [127.0.0.1]: "<127.0.0.1>"
+DB port [3306]: "<3306>"
+MySQL super user [this is only for setting the kaltura user passwd and WILL NOT be used with the application]: "<root>"
+MySQL super user passwd [this is only for setting the kaltura user passwd and WILL NOT be used with the application]: "<your root password>"
+Analytics DB hostname [127.0.0.1]: "<127.0.0.1>"
+Analytics DB port [3306]: "<3306>"
+Sphinx hostname [127.0.0.1]: "<127.0.0.1>"
+
+Secondary Sphinx hostname: [leave empty if none] "<empty>"
+
+VOD packager hostname [kalrpm.lcl]: "<kaltura-nginx-hostname>"
+
+VOD packager port to listen on [88]: 
+
+Service URL [http://kalrpm.lcl:443]: "<http://your-hostname:443>"
+
+Kaltura Admin user (email address): "<your email address>"
+Admin user login password (must be minimum 8 chars and include at least one of each: upper-case, lower-case, number and a special character): "<your kaltura admin password>"
+Confirm passwd: "<your kaltura admin password>"
+
+Your time zone [see http://php.net/date.timezone], or press enter for [Europe/Amsterdam]: "<your timezone>"
+How would you like to name your system (this name will show as the From field in emails sent by the system) [Kaltura Video Platform]? "<your preferred system name>"
+Your website Contact Us URL [http://corp.kaltura.com/company/contact-us]: "<your contact URL>"
+'Contact us' phone number [+1 800 871 5224]? "<your phone number>"
+
+Is your Apache working with SSL?[Y/n]: "<Y>"
+Please input path to your SSL certificate: "</path/to/my/ssl/certificate>"
+Please input path to your SSL key: "</path/to/my/ssl/key>"
+Please input path to your SSL chain file or leave empty in case you have none: "</path/to/my/ssl/chainfile>"
+Which port will this Vhost listen on? [443] "<443>"
+Please select one of the following options [0]: "<0>"
+```
+
 
 **Your Kaltura installation is now complete.**
 
@@ -44,7 +84,7 @@ Your install will now automatically perform all install tasks.
 All Kaltura scripts accept an answer file as their first argument.
 In order to preform an unattended [silent] install:
 
- - Create **config.ans** file according to [template](kaltura.template.ans).
+ - Create **config.ans** file according to [template](kaltura.config.template.ans).
  - Copy to file into the container: 
 ```bash
 # docker cp config.ans kaltura:/root/install/
