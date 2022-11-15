@@ -4,7 +4,7 @@ This guide describes docker container installation of an all-in-one Kaltura serv
 
 #### Table of Contents
 
-[Prerequisites](https://github.com/kaltura/platform-install-packages/blob/Rigel-18.17.0/doc/install-docker.md#prerequites)
+[Prerequisites](README.md#Prerequisites)
 
 [Step-by-step Installation](README.md#step-by-step-installation)
 
@@ -18,7 +18,7 @@ Installed [Docker Engine](https://docs.docker.com/engine/installation).
 
 ### Pre-Install notes
 * This install guide assumes that you ran kaltura/server container.
-* When installing, you will be prompted for each server's resolvable hostname. Note that it is crucial that all host names will be resolvable by other servers in the cluster (and outside the cluster for front machines). Before installing, verify that your /etc/hosts file is properly configured and that all Kaltura server hostnames are resolvable in your network.
+* When installing, you will be prompted for each server's resolvable hostname. Note that it is crucial that all host names will be resolvable by other servers in the cluster (and outside the cluster for front machines). Before installing, verify that your `/etc/hosts` file is properly configured and that all Kaltura server hostnames are resolvable in your network.
 
 ### Running the image
 Kaltura requires certain ports to be open for proper operation. [See the list of required open ports](kaltura-required-ports.md).
