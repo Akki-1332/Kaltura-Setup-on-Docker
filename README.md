@@ -6,9 +6,9 @@ This guide describes docker container installation of an all-in-one Kaltura serv
 
 [Prerequisites](https://github.com/kaltura/platform-install-packages/blob/Rigel-18.17.0/doc/install-docker.md#prerequites)
 
-[Step-by-step Installation](install-docker.md#step-by-step-installation)
+[Step-by-step Installation](README.md#step-by-step-installation)
 
-[Unattended Installation](install-docker.md#unattended-installation)
+[Unattended Installation](README.md#unattended-installation)
 
 ## Prerequisites
 
