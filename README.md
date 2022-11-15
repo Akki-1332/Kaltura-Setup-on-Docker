@@ -95,3 +95,21 @@ In order to preform an unattended [silent] install:
 ```
 
 **Note:** answer files contain a mysql root password param called SUPER_USER_PASSWD. Therefore, do NOT pass a MySQL root passwd as an argument when performing an unattended installation.
+
+---
+
+# **Thank You**
+
+I hope you find it useful. If you have any doubt in any of the step then feel free to contact me.
+If you find any issue in it then let me know.
+
+<!-- [![Build Status](https://img.icons8.com/color/452/linkedin.png)](https://www.linkedin.com/in/choudharyaakash/) -->
+
+
+<table>
+  <tr>
+    <th><a href="https://www.linkedin.com/in/choudharyaakash/" target="_blank"><img src="https://img.icons8.com/color/452/linkedin.png" alt="linkedin" width="30"/><a/></th>
+    <th><a href="mailto:choudharyaakash316@gmail.com" target="_blank"><img src="https://img.icons8.com/color/344/gmail-new.png" alt="Mail" width="30"/><a/>
+</th>
+  </tr>
+</table>
